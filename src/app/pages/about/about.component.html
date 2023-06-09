@@ -1,0 +1,33 @@
+<p>about works!</p>
+
+<div style="border: 1px solid red; padding: 15px; width: 50%; height: 300px">
+  <h1>Parent Component</h1>
+  <!-- display data from the child -->
+  <h2>
+    data from child : <b style="color: red">{{ messageFromChild }}</b>
+  </h2>
+
+  <h1>Age: {{ age }}</h1>
+  <h1>Name: {{ name$ | async }}</h1>
+</div>
+
+<div style="border: 1px solid blue; padding: 15px; width: 50%; height: 300px">
+  <h1>Child Component</h1>
+  <!-- display data from the child -->
+  <app-about-child
+    [name]="name"
+    (clicked)="receieveMessageFromChild($event)"
+  ></app-about-child>
+</div>
+
+<form [formGroup]="$any(form)">
+  <div class="form-group">
+    <input type="text" formControlName="name" />
+  </div>
+  <div class="form-group">
+    <input type="email" formControlName="email" />
+  </div>
+  <button type="button" (click)="onSubmitForm()" class="btn btn-primary">
+    save
+  </button>
+</form>

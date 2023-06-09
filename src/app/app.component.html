@@ -1,0 +1,37 @@
+<!-- <h1>This {{ title }} application is working</h1>
+
+<p>{{ names | json }}</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>SN</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let name of names; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ name }}</td>
+    </tr>
+
+    <tr *ngIf="names.length === 0">
+      <th colspan="2">No data found</th>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Cash Amount {{ cashAmount | currency : "TZS" }}</h2>
+<h2>Date {{ currentDate | date : "YYYY-MM-dd" }}</h2> -->
+
+<ul>
+  <li>
+    <a routerLink="/">Home</a>
+  </li>
+  <li>
+    <a routerLink="/about">About</a>
+  </li>
+</ul>
+<hr>
+
+<router-outlet></router-outlet>
